@@ -7,5 +7,66 @@ def select_word():
     word = random.choice(words)
     return word.upper()
 
-test = select_word()
-print(f"Selected word: {test}")
+# check game status
+def show_status(attempts):
+    stages = [
+        """
+            -----
+            |   |
+            |   O
+            |  \|/
+            |  / \
+            -
+        """,
+        """
+            -----
+            |   |
+            |   O
+            |  \|/
+            |  /
+            -
+        """,
+        """
+            -----
+            |   |
+            |   O
+            |  /|
+            |
+            -
+        """,
+        """
+            -----
+            |   |
+            |   O
+            |   |
+            |
+            -
+        """,
+        """
+            -----
+            |   |
+            |   O
+            |
+            |
+            -
+        """,
+        """
+            -----
+            |   |
+            |
+            |
+            |
+            -
+        """,
+        """
+            -----
+            
+            
+            
+            
+            
+        """,
+    ]
+
+    return stages[attempts]
+
